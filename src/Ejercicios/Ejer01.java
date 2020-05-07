@@ -7,19 +7,32 @@ public class Ejer01 extends Thread{
     int factorial = 0;
     int numero;
     public Ejer01(){
-        System.out.println("Sumas");
+        System.out.println("Números Ascendentes: ");
     }
     @Override
-    public void run() {
-        try {Thread.sleep(1000);} catch (Exception e) {}
-        for (int i = 0; i < numero; i++) {
-            
+    public void run(){
+        //int asc;
+        for (int i = 1; i <= 10 ; i++) {
+            System.out.println(i);
         }
-        System.out.print(this.numero+"");
     }
-
+    
     public static void main(String[] args) {
-        Thread factorial = new Ejer01();
-        factorial.start();
+        Thread descendentes = new Ejer01();
+        Thread acendentes = new descen();
+        descendentes.start();
+        acendentes.start();
+    }
+}
+
+class descen extends Thread{
+    public descen(){
+        System.out.println("Números Descendentes: ");
+    }
+    @Override
+    public void run(){
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+        }
     }
 }

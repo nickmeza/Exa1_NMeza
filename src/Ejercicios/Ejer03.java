@@ -9,7 +9,6 @@ public class Ejer03 extends Thread{
     public Ejer03(){
         System.out.print("ingrese numero: ");
         numero= Integer.parseInt(tec.nextLine());
-        System.out.println("Sumas");
     }
     @Override
     public void run() {
@@ -17,7 +16,6 @@ public class Ejer03 extends Thread{
             this.factorial=this.factorial*i;
         }
         System.out.println("Factorial es: "+this.factorial);
-        System.out.print(this.numero);
         Thread factorial = new Ejer03();
         factorial.start();
     }
